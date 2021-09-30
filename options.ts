@@ -1,8 +1,7 @@
+import { FetchLike } from "./types.ts";
 export type Options = {
   sid?: string;
-  fetch?: (
-    ...args: Parameters<typeof globalThis.fetch>
-  ) => ReturnType<typeof globalThis.fetch>;
+  fetch?: FetchLike;
 };
 
 export function createCookieHeaders(sid: string) {
